@@ -1,0 +1,16 @@
+C:\Users\Carlos Daniel\source\repos\E-Agenda\E_Agenda\E_Agenda.ConsoleApp\obj\Debug\net5.0\E_Agenda.ConsoleApp.csproj.AssemblyReference.cache
+C:\Users\Carlos Daniel\source\repos\E-Agenda\E_Agenda\E_Agenda.ConsoleApp\obj\Debug\net5.0\E_Agenda.ConsoleApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Carlos Daniel\source\repos\E-Agenda\E_Agenda\E_Agenda.ConsoleApp\obj\Debug\net5.0\E_Agenda.ConsoleApp.AssemblyInfoInputs.cache
+C:\Users\Carlos Daniel\source\repos\E-Agenda\E_Agenda\E_Agenda.ConsoleApp\obj\Debug\net5.0\E_Agenda.ConsoleApp.AssemblyInfo.cs
+C:\Users\Carlos Daniel\source\repos\E-Agenda\E_Agenda\E_Agenda.ConsoleApp\obj\Debug\net5.0\E_Agenda.ConsoleApp.csproj.CoreCompileInputs.cache
+C:\Users\Carlos Daniel\source\repos\E-Agenda\E_Agenda\E_Agenda.ConsoleApp\bin\Debug\net5.0\E_Agenda.ConsoleApp.exe
+C:\Users\Carlos Daniel\source\repos\E-Agenda\E_Agenda\E_Agenda.ConsoleApp\bin\Debug\net5.0\E_Agenda.ConsoleApp.deps.json
+C:\Users\Carlos Daniel\source\repos\E-Agenda\E_Agenda\E_Agenda.ConsoleApp\bin\Debug\net5.0\E_Agenda.ConsoleApp.runtimeconfig.json
+C:\Users\Carlos Daniel\source\repos\E-Agenda\E_Agenda\E_Agenda.ConsoleApp\bin\Debug\net5.0\E_Agenda.ConsoleApp.runtimeconfig.dev.json
+C:\Users\Carlos Daniel\source\repos\E-Agenda\E_Agenda\E_Agenda.ConsoleApp\bin\Debug\net5.0\E_Agenda.ConsoleApp.dll
+C:\Users\Carlos Daniel\source\repos\E-Agenda\E_Agenda\E_Agenda.ConsoleApp\bin\Debug\net5.0\E_Agenda.ConsoleApp.pdb
+C:\Users\Carlos Daniel\source\repos\E-Agenda\E_Agenda\E_Agenda.ConsoleApp\obj\Debug\net5.0\E_Agenda.ConsoleApp.dll
+C:\Users\Carlos Daniel\source\repos\E-Agenda\E_Agenda\E_Agenda.ConsoleApp\obj\Debug\net5.0\refint\E_Agenda.ConsoleApp.dll
+C:\Users\Carlos Daniel\source\repos\E-Agenda\E_Agenda\E_Agenda.ConsoleApp\obj\Debug\net5.0\E_Agenda.ConsoleApp.pdb
+C:\Users\Carlos Daniel\source\repos\E-Agenda\E_Agenda\E_Agenda.ConsoleApp\obj\Debug\net5.0\E_Agenda.ConsoleApp.genruntimeconfig.cache
+C:\Users\Carlos Daniel\source\repos\E-Agenda\E_Agenda\E_Agenda.ConsoleApp\obj\Debug\net5.0\ref\E_Agenda.ConsoleApp.dll
