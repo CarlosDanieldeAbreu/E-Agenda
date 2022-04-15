@@ -12,25 +12,36 @@ namespace E_Agenda.ConsoleApp.ModuloItem
     {
         private readonly Tarefa tarefa;
         private readonly string descricao;
-        private readonly int status;
+        public int status;
+        private readonly double percentualItem;
 
-        public Item(Tarefa tarefa, string descricao, int status)
+        public Item(Tarefa tarefa, string descricao, double percentualItem)
         {
             this.tarefa = tarefa;
             this.descricao = descricao;
-            this.status = status;
+            this.percentualItem = percentualItem;
         }
 
         public Tarefa Tarefa { get => tarefa; }
         public string Descricao { get => descricao; }
-        public int Status { get => status; }
+        public double PercentualItem { get => percentualItem; }
 
-        private string ValidarStatus()
+        public int RetornaStatus()
+        {
+            if (PercentualItem < 100)
+                status = 1;
+            else if (PercentualItem == 100)
+                status = 2;
+
+            return status;
+        }
+
+        private string AplicarMaskStatus()
         {
             string status = "";
-            if (Status == 1)
+            if (RetornaStatus() == 1)
                 status = "PENDENTE";
-            else if (Status == 2)
+            else if (RetornaStatus() == 2)
                 status = "CONCLUIDO";
 
             return status;
@@ -41,7 +52,13 @@ namespace E_Agenda.ConsoleApp.ModuloItem
             return "Id: " + id + Environment.NewLine +
                    "Tarefa: " + Tarefa.Titulo + Environment.NewLine +
                    "Descrição: " + Descricao + Environment.NewLine +
-                   "Status: " + ValidarStatus() + Environment.NewLine;
+                   "Percentual: " + PercentualItem + "%" + Environment.NewLine +
+                   "Status: " + AplicarMaskStatus() + Environment.NewLine;
+        }
+
+        public override string Validar()
+        {
+            throw new NotImplementedException();
         }
     }
 }

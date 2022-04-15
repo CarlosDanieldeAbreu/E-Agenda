@@ -32,7 +32,9 @@ namespace E_Agenda.ConsoleApp.ModuloCompromisso
             Console.WriteLine("Digite 3 para Excluir");
             Console.WriteLine("Digite 4 para Visualizar todos compromissos");
             Console.WriteLine("Digite 5 para Vizualizar compromissos do dia");
-            Console.WriteLine("Digite 6 para Vizualizar todas tarefas da semana");
+            Console.WriteLine("Digite 6 para Vizualizar compromissos da semana");
+            Console.WriteLine("Digite 7 para Vizualizar compromissos passados");
+            Console.WriteLine("Digite 8 para Vizualizar compromissos futuros");
 
             Console.WriteLine("Digite s para sair");
 
@@ -175,7 +177,7 @@ namespace E_Agenda.ConsoleApp.ModuloCompromisso
         public bool VisualizarRegistrosDiarios(string tipo)
         {
             if (tipo == "Tela")
-                MostrarTitulo("Visualização de Tarefas");
+                MostrarTitulo("Visualização de Compromissos diarios");
 
             List<Compromisso> compromissos = repositorioCompromisso.SelecionarTodos();
 
@@ -186,7 +188,7 @@ namespace E_Agenda.ConsoleApp.ModuloCompromisso
             }
 
             foreach (Compromisso compromisso in compromissos)
-                if (compromisso.DataCompromisso.Equals(CalcularDiferencaData(compromisso.DataCompromisso) >= 1 && CalcularDiferencaData(compromisso.DataCompromisso) < 2))
+                if (CalcularDiferencaData(compromisso.DataCompromisso) >= 1 && CalcularDiferencaData(compromisso.DataCompromisso) < 2)
                     Console.WriteLine(compromisso.ToString());
 
             Console.ReadLine();
@@ -197,7 +199,7 @@ namespace E_Agenda.ConsoleApp.ModuloCompromisso
         public bool VisualizarRegistrosSemanais(string tipo)
         {
             if (tipo == "Tela")
-                MostrarTitulo("Visualização de Compromisso mensal");
+                MostrarTitulo("Visualização de Compromissos mensal");
 
             List<Compromisso> compromissos = repositorioCompromisso.SelecionarTodos();
 
@@ -207,7 +209,50 @@ namespace E_Agenda.ConsoleApp.ModuloCompromisso
                 return false;
             }
             foreach (Compromisso compromisso in compromissos)
-                if (compromisso.DataCompromisso.Equals(CalcularDiferencaData(compromisso.DataCompromisso) <= 7))
+                if (CalcularDiferencaData(compromisso.DataCompromisso) <= 7)
+                    Console.WriteLine(compromisso.ToString());
+
+            Console.ReadLine();
+
+            return true;
+        }
+
+        public bool VisualizarRegistrosPassados(string tipo)
+        {
+            if (tipo == "Tela")
+                MostrarTitulo("Visualização de Compromissos passados ");
+
+            List<Compromisso> compromissos = repositorioCompromisso.SelecionarTodos();
+
+            if (compromissos.Count == 0)
+            {
+                notificador.ApresentarMensagem("Não há nenhum Compromisso disponível.", TipoMensagem.Atencao);
+                return false;
+            }
+
+            foreach (Compromisso compromisso in compromissos)
+                if (compromisso.DataCompromisso < DateTime.Now)
+                    Console.WriteLine(compromisso.ToString());
+
+            Console.ReadLine();
+
+            return true;
+        }
+        public bool VisualizarRegistrosFuturos(string tipo)
+        {
+            if (tipo == "Tela")
+                MostrarTitulo("Visualização de Compromissos futuros");
+
+            List<Compromisso> compromissos = repositorioCompromisso.SelecionarTodos();
+
+            if (compromissos.Count == 0)
+            {
+                notificador.ApresentarMensagem("Não há nenhum Compromisso disponível.", TipoMensagem.Atencao);
+                return false;
+            }
+
+            foreach (Compromisso compromisso in compromissos)
+                if (compromisso.DataCompromisso >= DateTime.Now)
                     Console.WriteLine(compromisso.ToString());
 
             Console.ReadLine();

@@ -64,6 +64,20 @@ namespace E_Agenda.ConsoleApp
                 if (!temRegistros)
                     notificador.ApresentarMensagem("Não há nenhum compromisso para vizualização semanal!", TipoMensagem.Atencao);
             }
+            else if (opcaoSelecionada == "7")
+            {
+                bool temRegistros = telaCadastroCompromisso.VisualizarRegistrosPassados("Tela");
+
+                if (!temRegistros)
+                    notificador.ApresentarMensagem("Não há nenhum compromisso passado!", TipoMensagem.Atencao);
+            }
+            else if (opcaoSelecionada == "8")
+            {
+                bool temRegistros = telaCadastroCompromisso.VisualizarRegistrosFuturos("Tela");
+
+                if (!temRegistros)
+                    notificador.ApresentarMensagem("Não há nenhum compromisso futuro!", TipoMensagem.Atencao);
+            }
         }
 
         public static void GerenciarCadastroBasico(TelaBase telaSelecionada, string opcaoSelecionada)
@@ -127,6 +141,7 @@ namespace E_Agenda.ConsoleApp
                 if (!temRegistros)
                     notificador.ApresentarMensagem("Não há nenhuma tarefa para vizualização mensal!", TipoMensagem.Atencao);
             }
+            
         }
     }
 }

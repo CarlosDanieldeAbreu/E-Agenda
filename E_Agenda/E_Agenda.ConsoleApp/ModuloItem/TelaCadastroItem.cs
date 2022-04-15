@@ -102,10 +102,10 @@ namespace E_Agenda.ConsoleApp.ModuloItem
         {
             Console.Write("Digite a descrição: ");
             string descricao = Console.ReadLine();
-            Console.Write("Digite o status: \n1 - PENDENTE \n2 - CONCLUIDO \nDigite: ");
-            int status = int.Parse(Console.ReadLine());
+            Console.Write("Digite o percentual: ");
+            double percentualItem = double.Parse(Console.ReadLine());
 
-            return new Item(tarefaSelecionada ,descricao, status);
+            return new Item(tarefaSelecionada ,descricao, percentualItem);
         }
 
         private Tarefa ObtemTarefa()
@@ -148,5 +148,15 @@ namespace E_Agenda.ConsoleApp.ModuloItem
 
             return true;
         }
+
+        //public double CalcularPercentual(Tarefa tarefa)
+        //{
+        //    List<Item> itens = repositorioItem.SelecionarTodos();
+        //    double calculoPercentual = 0;
+        //    foreach (Item item in itens)
+        //        if (tarefa.id == item.Tarefa.id)
+        //            calculoPercentual = calculoPercentual + item.PercentualItem;
+        //    return calculoPercentual;
+        //}
     }
 }

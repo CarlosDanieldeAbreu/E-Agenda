@@ -86,8 +86,10 @@ namespace E_Agenda.ConsoleApp.ModuloContato
         public void Inserir()
         {
             MostrarTitulo("Inserindo novo Contato");
+
             Contato novoContato = ObterContato();
             string statusValidacao = repositorioContato.Inserir(novoContato);
+
             if (statusValidacao == "REGISTRO_VALIDO")
                 notificador.ApresentarMensagem("Contato cadastrado com sucesso", TipoMensagem.Sucesso);
             else

@@ -42,5 +42,10 @@ namespace E_Agenda.ConsoleApp.ModuloCompromisso
                    "Local: " + Local + Environment.NewLine +
                    "Contato: " + Contato.Nome + Environment.NewLine;
         }
+
+        public override string Validar()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -140,9 +140,12 @@ namespace E_Agenda.ConsoleApp.ModuloTarefa
                 notificador.ApresentarMensagem("Não há nenhuma tarefa disponível.", TipoMensagem.Atencao);
                 return false;
             }
-
             foreach (Tarefa tarefa in tarefas)
+            {
+                tarefas.GroupBy(x => x.Prioridade);
                 Console.WriteLine(tarefa.ToString());
+            }
+              
 
             Console.ReadLine();
 
@@ -163,7 +166,7 @@ namespace E_Agenda.ConsoleApp.ModuloTarefa
             }
 
             foreach (Tarefa tarefa in tarefas)
-                if(tarefa.DataDeCriacao.Equals(CalcularDiferencaData(tarefa.DataDeCriacao) >=1 && CalcularDiferencaData(tarefa.DataDeCriacao) < 2))
+                if(CalcularDiferencaData(tarefa.DataDeCriacao) >=1 && CalcularDiferencaData(tarefa.DataDeCriacao) < 2)
                     Console.WriteLine(tarefa.ToString());
 
             Console.ReadLine();
@@ -185,7 +188,7 @@ namespace E_Agenda.ConsoleApp.ModuloTarefa
             }
 
             foreach (Tarefa tarefa in tarefas)
-                if (tarefa.DataDeCriacao.Equals(CalcularDiferencaData(tarefa.DataDeCriacao) <= 7))
+                if (CalcularDiferencaData(tarefa.DataDeCriacao) <= 7)
                     Console.WriteLine(tarefa.ToString());
 
             Console.ReadLine();
@@ -207,7 +210,7 @@ namespace E_Agenda.ConsoleApp.ModuloTarefa
                 return false;
             }
             foreach (Tarefa tarefa in tarefas)
-                if (tarefa.DataDeCriacao.Equals(CalcularDiferencaData(tarefa.DataDeCriacao) <= 30))
+                if (CalcularDiferencaData(tarefa.DataDeCriacao) <= 30)
                     Console.WriteLine(tarefa.ToString());
 
             Console.ReadLine();
